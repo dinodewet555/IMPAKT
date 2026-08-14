@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #090A0F;
+    --card-surface: rgba(18, 20, 29, 0.75);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --crimson: #FF1E27;
+    --crimson-glow: rgba(255, 30, 39, 0.4);
+    --gold: #F59E0B;
+  }
+
+  body {
+    background-color: #090A0F;
+    color: #F1F5F9;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-oswald), sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+/* Glassmorphism & Card Utilities */
+.glass-panel {
+  background: rgba(18, 20, 29, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(26, 30, 44, 0.85);
+  border-color: rgba(255, 30, 39, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(255, 30, 39, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Glowing text and outline effects */
+.text-glow-crimson {
+  text-shadow: 0 0 20px rgba(255, 30, 39, 0.6);
+}
+
+.border-glow-crimson {
+  box-shadow: 0 0 15px rgba(255, 30, 39, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262938;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF1E27;
+}
+
+/* Animated Gradient Background */
+.bg-mesh-dark {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 30, 39, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
+              #090A0F;
+}
