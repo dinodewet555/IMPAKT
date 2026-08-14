@@ -8,9 +8,10 @@ import FreeTrialModal from './FreeTrialModal';
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Classes & Schedule', href: '/classes' },
-  { name: 'Facilities', href: '/facilities' },
+  { name: 'Classes', href: '/classes' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Membership', href: '/membership' },
+  { name: 'Facilities', href: '/facilities' },
   { name: 'Contact Us', href: '/contact' },
 ];
 

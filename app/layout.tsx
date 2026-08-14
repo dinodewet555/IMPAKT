@@ -3,6 +3,7 @@ import { Inter, Oswald } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SmoothScroll from '@/components/SmoothScroll';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -111,9 +112,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-[#090A0F] text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow pt-20">{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          <main className="flex-grow pt-20">{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

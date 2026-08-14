@@ -218,6 +218,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© {new Date().getFullYear()} IMPAKT Academy of Mixed Martial Arts. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
+            <Link href="/blog" className="hover:text-slate-300 transition-colors">Blog & Guides</Link>
             <Link href="/membership" className="hover:text-slate-300 transition-colors">Pricing & Rates</Link>
             <Link href="/facilities" className="hover:text-slate-300 transition-colors">Gym Facilities</Link>
             <Link href="/contact" className="hover:text-slate-300 transition-colors">Claremont Location</Link>
