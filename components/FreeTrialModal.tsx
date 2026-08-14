@@ -50,9 +50,16 @@ export default function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps)
 
         {!submitted ? (
           <div>
-            <div className="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-widest text-red-500">
-              <Flame className="w-4 h-4 fill-red-500 animate-pulse" />
-              <span>Zero Risk • Free 1-Day Access</span>
+            <div className="flex items-center justify-between gap-2 mb-4">
+              <img
+                src="/images/impakt-logo.png"
+                alt="IMPAKT Academy"
+                className="h-8 w-auto object-contain"
+              />
+              <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-red-500 bg-red-500/10 px-2.5 py-1 rounded-full border border-red-500/20">
+                <Flame className="w-3.5 h-3.5 fill-red-500 animate-pulse" />
+                <span>Free 1-Day Pass</span>
+              </div>
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-2 uppercase">

@@ -60,13 +60,12 @@ export default function Footer() {
           
           {/* Column 1: Brand & Operational Status */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center text-white shadow-lg shadow-red-600/30">
-                <Shield className="w-6 h-6 fill-current text-white" />
-              </div>
-              <span className="font-heading text-2xl font-bold tracking-wider text-white">
-                IMPAKT <span className="text-red-500">MMA</span>
-              </span>
+            <Link href="/" className="inline-block group">
+              <img
+                src="/images/impakt-logo.png"
+                alt="IMPAKT Academy of Mixed Martial Arts"
+                className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed">

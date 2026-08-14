@@ -266,6 +266,13 @@ export default function HomePage() {
                         {item.badge}
                       </span>
                     </div>
+                    <div className="absolute top-4 right-4 w-11 h-11 rounded-xl bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center p-2 group-hover:scale-110 group-hover:border-red-500/50 transition-all duration-300 shadow-xl">
+                      <img
+                        src={item.icon}
+                        alt=""
+                        className="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,30,39,0.7)]"
+                      />
+                    </div>
                   </div>
 
                   <div className="p-6">

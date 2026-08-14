@@ -104,25 +104,34 @@ export default function ClassesPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'Muay Thai Kickboxing', slug: 'muay-thai-kickboxing', desc: 'Stand-up striking, padwork, low kicks & clinch work.' },
-                { title: 'Brazilian Jiu-Jitsu (BJJ)', slug: 'brazilian-jiu-jitsu', desc: 'Gi & No-Gi ground control, joint locks & submissions.' },
-                { title: 'Boxing & BoxFit', slug: 'boxing-boxfit', desc: 'Technical footwork, slip bag drills & cardio endurance.' },
-                { title: 'Kids Martial Arts', slug: 'kids-hybrid', desc: 'Anti-bullying, discipline, focus & youth self-defense.' },
-                { title: '12-Week Transformation', slug: '12-week-transformation', desc: 'Full body recomposition & fight fitness challenge.' },
+                { title: 'Muay Thai Kickboxing', slug: 'muay-thai-kickboxing', desc: 'Stand-up striking, padwork, low kicks & clinch work.', icon: '/images/impakt-class-icon-mt.png' },
+                { title: 'Brazilian Jiu-Jitsu (BJJ)', slug: 'brazilian-jiu-jitsu', desc: 'Gi & No-Gi ground control, joint locks & submissions.', icon: '/images/impakt-class-icon-jj.png' },
+                { title: 'Boxing & BoxFit', slug: 'boxing-boxfit', desc: 'Technical footwork, slip bag drills & cardio endurance.', icon: '/images/impakt-class-icon-bx.png' },
+                { title: 'Kids Martial Arts', slug: 'kids-hybrid', desc: 'Anti-bullying, discipline, focus & youth self-defense.', icon: '/images/impakt-class-icon-kb.png' },
+                { title: '12-Week Transformation', slug: '12-week-transformation', desc: 'Full body recomposition & fight fitness challenge.', icon: '/images/impakt-class-icon-training.png' },
               ].map((p) => (
                 <Link
                   key={p.slug}
                   href={`/classes/${p.slug}`}
-                  className="glass-panel glass-panel-hover p-6 rounded-2xl border border-white/10 flex flex-col justify-between group"
+                  className="glass-panel glass-panel-hover p-6 rounded-2xl border border-white/10 flex flex-col justify-between group relative overflow-hidden"
                 >
-                  <div>
-                    <h3 className="text-xl font-heading font-bold text-white uppercase group-hover:text-red-400 transition-colors mb-2">
-                      {p.title}
-                    </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed mb-4">{p.desc}</p>
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <div>
+                      <h3 className="text-xl font-heading font-bold text-white uppercase group-hover:text-red-400 transition-colors mb-2">
+                        {p.title}
+                      </h3>
+                      <p className="text-xs text-slate-400 leading-relaxed">{p.desc}</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-xl bg-red-600/10 border border-red-500/30 flex items-center justify-center p-2 shrink-0 group-hover:scale-110 group-hover:bg-red-600/20 transition-all">
+                      <img
+                        src={p.icon}
+                        alt=""
+                        className="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,30,39,0.6)]"
+                      />
+                    </div>
                   </div>
 
-                  <div className="flex items-center text-xs font-bold text-red-500 uppercase tracking-wider gap-1 group-hover:translate-x-1 transition-transform">
+                  <div className="flex items-center text-xs font-bold text-red-500 uppercase tracking-wider gap-1 group-hover:translate-x-1 transition-transform pt-2 border-t border-white/5">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>

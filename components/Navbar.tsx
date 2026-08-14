@@ -44,17 +44,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
-              <Shield className="w-6 h-6 fill-current text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-xl sm:text-2xl font-bold tracking-wider text-white flex items-center gap-1.5">
-                IMPAKT <span className="text-red-500">MMA</span>
-              </span>
-              <span className="text-[10px] text-slate-400 font-sans tracking-widest uppercase">
-                Est. 2001 • Claremont, Cape Town
-              </span>
-            </div>
+            <img
+              src="/images/impakt-logo.png"
+              alt="IMPAKT Academy of Mixed Martial Arts"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

@@ -16,6 +16,15 @@ interface ClassItem {
   level: 'All Levels' | 'Beginner' | 'Advanced / Sparring' | 'Kids';
 }
 
+const disciplineIcons: Record<string, string> = {
+  'Muay Thai': '/images/impakt-class-icon-mt.png',
+  'BJJ': '/images/impakt-class-icon-jj.png',
+  'Boxing': '/images/impakt-class-icon-bx.png',
+  'BoxFit': '/images/impakt-class-icon-bx.png',
+  'Kids': '/images/impakt-class-icon-kb.png',
+  '12-Week': '/images/impakt-class-icon-training.png',
+};
+
 const scheduleData: Record<DayOfWeek, ClassItem[]> = {
   Monday: [
     { id: 'm1', time: '06:00 - 07:00', title: 'BoxFit & Morning Striking', discipline: 'BoxFit', instructor: 'Coach Dino', location: 'Boxing Ring Floor', level: 'All Levels' },
@@ -144,6 +153,14 @@ export default function ScheduleFilter() {
                     <span>{item.time.split(' - ')[0]}</span>
                   </div>
                   <div className="text-[10px] text-slate-400 font-mono">{item.time}</div>
+                </div>
+
+                <div className="w-12 h-12 rounded-xl bg-black/40 border border-white/10 p-2 hidden sm:flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-red-500/40 transition-all">
+                  <img
+                    src={disciplineIcons[item.discipline] || '/images/impakt-class-icon-mma.png'}
+                    alt=""
+                    className="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,30,39,0.7)]"
+                  />
                 </div>
 
                 <div>

@@ -13,6 +13,7 @@ const pricingPlans = [
     period: 'per session',
     badge: 'Flexible Access',
     popular: false,
+    icon: '/images/impakt-class-icon-bx.png',
     desc: 'Perfect for visitors, casual trainers, or trying out a single discipline session.',
     features: [
       'Access to any 1 scheduled group class',
@@ -28,6 +29,7 @@ const pricingPlans = [
     period: 'per month',
     badge: 'Best Value',
     popular: true,
+    icon: '/images/impakt-class-icon-mma.png',
     desc: 'Our most popular all-access package for serious combat athletes and fitness enthusiasts.',
     features: [
       'UNLIMITED access to all Muay Thai, BJJ, Boxing & BoxFit classes',
@@ -39,34 +41,36 @@ const pricingPlans = [
     cta: 'Join Unlimited Plan',
   },
   {
-    name: 'Student & Women Special',
-    price: 'R700',
+    name: 'Women & Student Special',
+    price: 'R1200',
     period: 'per month',
-    badge: 'Discounted',
+    badge: 'Dedicated Classes',
     popular: false,
-    desc: 'Dedicated special rate for active university students (UCT / Stellenbosch) and women trainers.',
+    icon: '/images/impakt-class-icon-jj.png',
+    desc: 'Dedicated women’s classes and student rate with full access across striking and grappling.',
     features: [
       'UNLIMITED group classes across all disciplines',
-      'Full mat and weight floor access',
-      'Valid student ID required at registration',
+      'Dedicated Women’s only striking & self-defense',
+      'Full tatami mat and weight floor access',
       'Month-to-month flexibility',
     ],
-    cta: 'Claim Student Rate',
+    cta: 'Join Women / Student Plan',
   },
   {
-    name: '1-on-1 Private Fighter PT',
-    price: 'R450',
-    period: 'per 60min session',
-    badge: 'Pro Coaching',
+    name: '12-Week Transformation',
+    price: 'R2800',
+    period: 'per month',
+    badge: 'Body Recomposition',
     popular: false,
-    desc: 'Dedicated private coaching tailored precisely to your striking, grappling, or fight prep goals.',
+    icon: '/images/impakt-class-icon-training.png',
+    desc: 'Complete 3-phase athletic transformation package combining strength periodization and fight conditioning.',
     features: [
-      '1-on-1 focus mitts & Thai padwork',
-      'Customized video analysis & technique correction',
-      'Flexible scheduling (morning or evening)',
-      'Custom nutrition & weight-cut plan',
+      'Periodized strength & fighter HIIT circuits',
+      'Bi-weekly biometric tracking & body scan',
+      'Custom caloric & macronutrient framework',
+      'UNLIMITED BoxFit and gym facility access',
     ],
-    cta: 'Book Private Coach',
+    cta: 'Join 12-Week Package',
   },
 ];
 
@@ -151,6 +155,13 @@ export default function MembershipPage() {
                     <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300">
                       {plan.badge}
                     </span>
+                    <div className="w-10 h-10 rounded-xl bg-black/40 border border-white/10 p-1.5 flex items-center justify-center">
+                      <img
+                        src={plan.icon}
+                        alt=""
+                        className="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,30,39,0.7)]"
+                      />
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-heading font-bold text-white uppercase mb-2">

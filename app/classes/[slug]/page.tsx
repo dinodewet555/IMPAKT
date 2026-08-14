@@ -14,6 +14,7 @@ interface ProgramDetail {
   category: string;
   tagline: string;
   heroImage: string;
+  icon: string;
   overview: string;
   benefits: string[];
   curriculum: string[];
@@ -31,29 +32,30 @@ const programsData: Record<string, ProgramDetail> = {
   'muay-thai-kickboxing': {
     slug: 'muay-thai-kickboxing',
     title: 'Muay Thai Kickboxing',
-    seoTitle: 'Muay Thai Kickboxing Classes Claremont, Cape Town | IMPAKT MMA',
-    seoDesc: 'Elite Muay Thai striking classes in Claremont, Cape Town. Master elbow strikes, knees, kicks, and clinch work under veteran combat coaches.',
-    h1: 'Muay Thai Kickboxing & Striking Academy in Claremont, Cape Town',
+    seoTitle: 'Muay Thai Kickboxing Classes in Claremont | IMPAKT Academy Cape Town',
+    seoDesc: 'Master the Art of Eight Limbs at IMPAKT Academy in Claremont, Cape Town. Train authentic Muay Thai kickboxing, clinch mastery, heavy pad work, and ring craft since 2001.',
+    h1: 'Muay Thai Kickboxing & Authentic Striking Academy in Claremont, Cape Town',
     category: 'Striking Arts',
     tagline: 'The Art of Eight Limbs • Power, Technique & Unstoppable Cardio',
     heroImage: '/images/impakt-kickboxing-strike.jpg',
-    overview: 'Muay Thai is widely recognized as the world’s most effective stand-up striking discipline. At IMPAKT MMA Claremont, our Muay Thai program teaches authentic Thai padwork, footwork, clinch work, sweep defenses, and heavy bag conditioning in a controlled, supportive environment.',
+    icon: '/images/impakt-class-icon-mt.png',
+    overview: 'Muay Thai Kickboxing at IMPAKT Academy in Claremont, Cape Town is a traditional combat striking system known as the "Art of Eight Limbs", utilizing punches, kicks, knees, and elbow strikes in combination with stand-up clinch wrestling. Established in 2001, IMPAKT’s striking curriculum separates technical combat mechanics from generic fitness, providing authentic, fighter-grade instruction inside a full-size regulation boxing ring and heavy-bag facility.',
     benefits: [
-      'Master power striking with shins, elbows, knees, and fists',
-      'Burn up to 800+ calories per high-intensity 60-minute session',
-      'Sharpen mental toughness, reflex speed, and spatial awareness',
-      'Suitable for zero-experience beginners up to active fight competitors',
+      'Master power striking with shins, elbows, knees, and fists in the regulation boxing ring',
+      'Burn up to 800+ calories per high-intensity 60-minute technical striking session',
+      'Sharpen mental toughness, reaction speed, and spatial awareness with certified coaches',
+      'Suitable for zero-experience beginners up to active fight camp competitors',
     ],
     curriculum: [
       'Level 1: Stance, Guard, Teep Kick, Roundhouse & Jab-Cross Mechanics',
       'Level 2: Dutch Kickboxing Combinations, Slip Drills & Low Shin Conditioning',
-      'Level 3: Clinch Control, Thai Knee Strikes & Elbow Counters',
+      'Level 3: Clinch Control (Plum), Thai Knee Strikes & Elbow Counters',
       'Level 4: Controlled Technical Sparring & Fighter Ring Preparation',
     ],
     equipment: [
-      '16oz Boxing Gloves (12oz for light bagwork)',
+      '14oz-16oz Boxing Gloves (12oz for light bagwork)',
       'Hand Wraps (4.5m stretch cotton)',
-      'Shin Guards (for sparring classes)',
+      'Muay Thai Shin Guards (for technical partner drills)',
       'Mouthguard & Groin Guard',
     ],
     coach: {
@@ -62,32 +64,47 @@ const programsData: Record<string, ProgramDetail> = {
       bio: 'Former Western Cape Kickboxing Champion with over 15 years of corner experience preparing amateur and professional combatants.',
     },
     scheduleTimes: [
-      'Mon & Wed: 17:30 – 18:30 (Fundamentals)',
+      'Mon & Wed: 17:30 – 18:30 (Fundamentals & Bag Drills)',
       'Mon & Wed: 19:30 – 20:30 (Advanced & Sparring)',
-      'Tue & Thu: 18:00 – 19:00 (Padwork & Clinch)',
-      'Sat: 08:30 – 09:30 (Weekend Striking)',
+      'Tue & Thu: 18:00 – 19:00 (Thai Pads & Clinch)',
+      'Sat: 08:30 – 09:30 (Weekend Striking & Conditioning)',
     ],
     faqs: [
-      { q: 'Do I need prior martial arts experience to join?', a: 'No! Over 60% of our new members start as complete beginners. Our fundamentals track breaks down footwork and strikes safely.' },
-      { q: 'Will I get hit on my first day?', a: 'Absolutely not. Sparring is strictly optional and restricted to advanced technical sparring classes. Beginner classes focus exclusively on pads and heavy bags.' },
+      {
+        q: 'How is Muay Thai different from BoxFit or standard Kickboxing?',
+        a: 'Muay Thai includes elbows, knees, and stand-up clinch wrestling (the Art of Eight Limbs) in addition to punches and kicks. While BoxFit is a non-contact cardio workout, our Muay Thai classes teach genuine combat mechanics, defense, pad holding, and optional technical sparring.'
+      },
+      {
+        q: 'Do I need my own boxing gloves and shin guards to start?',
+        a: 'Beginners can start with comfortable athletic apparel and hand wraps. For hygiene and safety, members progressing to pad work and partner drills will need 14oz–16oz boxing gloves and Muay Thai shin guards, which can be acquired through our pro shop.'
+      },
+      {
+        q: 'Will I be forced to spar in Muay Thai classes?',
+        a: 'No. Live sparring is completely optional and strictly reserved for intermediate and advanced students who have demonstrated defensive control and possess full protective gear (mouthguard, headgear, shin guards, 16oz gloves).'
+      },
+      {
+        q: 'Can I attend a single Muay Thai session without a contract?',
+        a: 'Yes! IMPAKT Academy welcomes visitors and drop-ins with a standard R100 single-session day pass for any scheduled class.'
+      },
     ],
   },
   'brazilian-jiu-jitsu': {
     slug: 'brazilian-jiu-jitsu',
     slugAlt: 'bjj',
     title: 'Brazilian Jiu-Jitsu (BJJ)',
-    seoTitle: 'Brazilian Jiu-Jitsu (BJJ) Gym Claremont, Cape Town | IMPAKT MMA',
-    seoDesc: 'Train BJJ & Submission Grappling in Claremont, Cape Town. Authentic Gi and No-Gi ground control, joint locks, and chokeholds with black belt instruction.',
+    seoTitle: 'Brazilian Jiu-Jitsu & Submission Grappling in Claremont | IMPAKT Cape Town',
+    seoDesc: 'Train Brazilian Jiu-Jitsu (Gi & No-Gi) and submission grappling at IMPAKT Academy in Claremont, Cape Town. Master takedowns, guard retention, and joint locks on professional tatami mats.',
     h1: 'Brazilian Jiu-Jitsu & Grappling Academy in Claremont, Cape Town',
     category: 'Ground Grappling',
     tagline: 'The Gentle Art • Leverage, Chokes & Ground Dominance',
     heroImage: '/images/impakt-classes-4.jpg',
-    overview: 'Brazilian Jiu-Jitsu relies on leverage, technique, and joint locks rather than brute strength. IMPAKT’s BJJ program covers both traditional Gi submission grappling and modern No-Gi wrestling.',
+    icon: '/images/impakt-class-icon-jj.png',
+    overview: 'Brazilian Jiu-Jitsu (BJJ) and Submission Grappling at IMPAKT Academy in Claremont, Cape Town is a ground-fighting martial art focused on leverage, positional dominance, joint locks, and chokes. Founded on the principle that technique overcomes brute strength, IMPAKT’s grappling curriculum offers structured training in both traditional Gi BJJ and fast-paced No-Gi Submission Wrestling on Olympic-grade tatami mats.',
     benefits: [
       'Neutralize larger opponents through leverage, guard passing, and submission chokes',
-      'Incredible core strength, mobility, and functional hip control',
+      'Incredible core strength, mobility, and functional hip control on high-density tatami mats',
       'Progress through official belt ranks under accredited IBJJF standards',
-      'Access to daily open mat rolling sessions with high-level training partners',
+      'Access to daily open mat rolling sessions with experienced, respectful training partners',
     ],
     curriculum: [
       'White Belt Core: Guard retention, hip escapes, armbars & triangle chokes',
@@ -112,8 +129,18 @@ const programsData: Record<string, ProgramDetail> = {
       'Sat: 09:30 – 11:00 (All-Gym Open Mat)',
     ],
     faqs: [
-      { q: 'What is the difference between Gi and No-Gi BJJ?', a: 'Gi BJJ is trained in a traditional heavy cotton kimono where grips on lapels and sleeves are allowed. No-Gi is trained in rashguards and shorts focusing on wrestling hooks and body control.' },
-      { q: 'Can older adults learn BJJ safely?', a: 'Yes! BJJ is often called human chess because technique overcomes physical force. We have active practitioners in their 40s, 50s, and beyond.' },
+      {
+        q: 'What should I wear to my first BJJ class at IMPAKT Academy?',
+        a: 'For your first No-Gi class, wear a clean athletic t-shirt or rashguard and shorts without pockets or metal zippers. If attending a Gi class, a standard BJJ or Judo kimono is required; beginner loaner gis or assistance with acquiring gear is available at the front desk.'
+      },
+      {
+        q: 'Is Brazilian Jiu-Jitsu safe for older adults and beginners?',
+        a: 'Yes! Jiu-Jitsu is one of the safest martial arts because training is conducted without concussive strikes. Sparring (rolling) allows athletes to practice at 100% effort while the tap-out rule ensures immediate cessation of submissions before injury occurs.'
+      },
+      {
+        q: 'How often should I train Brazilian Jiu-Jitsu to make steady progress?',
+        a: 'Practicing 2 to 3 sessions per week provides a consistent learning curve for technical retention, physical conditioning, and positional fluency. Advanced practitioners and competitors typically train 4 to 6 times per week.'
+      },
     ],
   },
   'boxing-boxfit': {
@@ -125,7 +152,8 @@ const programsData: Record<string, ProgramDetail> = {
     category: 'Boxing & Fitness',
     tagline: 'Sweet Science • Technical Footwork, Speed & High-Endurance Fitness',
     heroImage: '/images/impakt-boxing-punch.jpg',
-    overview: 'Experience the Sweet Science of Western Boxing combined with BoxFit conditioning. Learn head movement, heavy bag combinations, slip bag drills, and focus mitt work in our official elevated ring.',
+    icon: '/images/impakt-class-icon-bx.png',
+    overview: 'Experience the Sweet Science of Western Boxing combined with high-intensity BoxFit conditioning. Learn head movement, heavy bag combinations, slip bag drills, and focus mitt work in our official elevated boxing ring.',
     benefits: [
       'Develop lightning-fast hand speed, footwork, and slip movement',
       'Increase cardiovascular VO2 max stamina and explosive arm endurance',
@@ -149,7 +177,14 @@ const programsData: Record<string, ProgramDetail> = {
       'Wed & Fri: 17:00 – 18:00 (Boxing Mitts & Bag Drills)',
     ],
     faqs: [
-      { q: 'Is BoxFit suitable for weight loss?', a: 'Yes! BoxFit is one of the highest calorie-burning workouts available, burning between 600 to 900 calories per session while toning arms, shoulders, and core.' },
+      {
+        q: 'Is BoxFit suitable for weight loss?',
+        a: 'Yes! BoxFit is one of the highest calorie-burning workouts available, burning between 600 to 900 calories per session while toning arms, shoulders, and core without any sparring or head contact.'
+      },
+      {
+        q: 'Can beginners join Boxing & BoxFit classes?',
+        a: 'Absolutely. Every movement is demonstrated by our coaches with beginner modifications provided for pacing and form.'
+      }
     ],
   },
   'kids-hybrid': {
@@ -161,7 +196,8 @@ const programsData: Record<string, ProgramDetail> = {
     category: 'Youth Development',
     tagline: 'Building Future Champions • Confidence, Discipline & Respect',
     heroImage: '/images/MARTIAL ARTS.jpg',
-    overview: 'Our Kids Hybrid program blends basic Kickboxing striking and BJJ grappling defense into a fun, safe, and disciplined class structure for children aged 5 to 14.',
+    icon: '/images/impakt-class-icon-kb.png',
+    overview: 'Our Kids Hybrid Impakt Systems program blends basic Kickboxing striking and BJJ grappling defense into a fun, safe, and disciplined class structure for children aged 5 to 14 on shock-absorbent tatami mats.',
     benefits: [
       'Empower children with anti-bullying confidence and self-control',
       'Improve coordination, motor skills, agility, and posture',
@@ -184,30 +220,34 @@ const programsData: Record<string, ProgramDetail> = {
       'Tue & Thu: 16:30 – 17:30 (Kids Ages 5-14)',
     ],
     faqs: [
-      { q: 'What age groups are accepted?', a: 'We accept children from ages 5 up to 14. Classes are divided by skill level and height to ensure safe, age-appropriate pairing.' },
+      {
+        q: 'What age groups are accepted into the Kids Hybrid program?',
+        a: 'We accept children from ages 5 up to 14. Classes are divided by skill level and age to ensure safe, engaging, and age-appropriate pairing.'
+      },
     ],
   },
   '12-week-transformation': {
     slug: '12-week-transformation',
     slugAlt: 'transformation',
     title: '12-Week Fighter Transformation',
-    seoTitle: '12-Week Transformation Program Claremont | Fight Fitness Cape Town',
-    seoDesc: 'Transform your body with our 12-week combat fitness program in Claremont, Cape Town. Fighter conditioning, strength, and body recomposition.',
-    h1: '12-Week Fighter Fitness & Body Transformation in Claremont',
+    seoTitle: '12-Week Fighter’s Fitness Transformation | IMPAKT Academy Claremont',
+    seoDesc: 'Transform your body with the 12-Week Fighter’s Fitness Package at IMPAKT Academy in Claremont, Cape Town. Combat conditioning, strength periodization, and elite coaching for R2,800/month.',
+    h1: '12-Week Fighter Fitness & Body Transformation in Claremont, Cape Town',
     category: 'Transformation Track',
     tagline: 'Get Fight-Fit Without Getting Hit • Shred Fat & Build Athletic Muscle',
     heroImage: '/images/impakt-classes-6.jpg',
-    overview: 'A structured 12-week high-performance program designed to strip body fat, build lean muscle, and dramatically elevate your stamina using authentic combat sports conditioning.',
+    icon: '/images/impakt-class-icon-training.png',
+    overview: 'The 12-Week Fighter’s Fitness Package at IMPAKT Academy in Claremont, Cape Town is an intensive, multi-phase body recomposition and athletic conditioning program. Priced at R2,800 per month, this curriculum applies combat athlete training methodologies—combining periodized resistance training, high-output metabolic conditioning, boxing drills, and nutritional accountability—to strip body fat, build functional muscle, and peak cardiovascular stamina.',
     benefits: [
       'Full body composition assessment & bi-weekly check-ins',
-      'Customized macronutrient fight-nutrition guidelines',
-      'High-intensity circuit training combining kettlebells, sleds, and heavy bags',
-      'Guaranteed stamina and physique improvements',
+      'Customized macronutrient fight-nutrition guidelines and caloric tracking frameworks',
+      'High-intensity circuit training combining kettlebells, sleds, free weights, and heavy bags',
+      'Guaranteed stamina, strength, and body composition improvements with direct coach accountability',
     ],
     curriculum: [
-      'Weeks 1-4: Anabolic Base Conditioning & Technique Foundation',
-      'Weeks 5-8: High-Volume Fat Burn & Kettlebell Circuits',
-      'Weeks 9-12: Peak Fighter Stamina & Final Recomposition',
+      'Weeks 1-4: Foundation, Core Stability & Aerobic Base Conditioning',
+      'Weeks 5-8: Hypertrophy, Explosive Power & Heavy-Bag Interval Output',
+      'Weeks 9-12: Championship Conditioning, Sled Drills & Final Recomposition',
     ],
     equipment: ['Training Shorts', 'Cross-training Shoes', 'Heart Rate Monitor (Optional)'],
     coach: {
@@ -220,7 +260,18 @@ const programsData: Record<string, ProgramDetail> = {
       'Sat: 11:00 – 12:00 (Weekly Check-in & Shred)',
     ],
     faqs: [
-      { q: 'Is nutrition advice included in the 12-week program?', a: 'Yes! You receive custom macro targets and clean eating meal templates optimized for energy and body fat reduction.' },
+      {
+        q: 'Do I have to spar or fight during the 12-Week Fighter’s Fitness Package?',
+        a: 'No. The 12-Week Fighter’s Fitness Package uses the conditioning, strength, and bag training protocols of combat athletes to transform your body without any physical sparring or contact fighting.'
+      },
+      {
+        q: 'What is the cost of the 12-Week Fighter’s Fitness Package?',
+        a: 'The package is priced at R2,800 per month over a 3-month (12-week) commitment period. This includes full access to gym facilities, structured programming, group classes (including BoxFit), and biometric tracking.'
+      },
+      {
+        q: 'Is this program suitable for complete beginners who are out of shape?',
+        a: 'Yes. Every workout and resistance load is scaled to your initial fitness baseline during Phase 1. Our experienced coaches guide your form, cadence, and recovery to ensure progressive results without burnout or injury.'
+      },
     ],
   },
 };
@@ -257,7 +308,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
     );
   }
 
-  const jsonLdData = [
+  const jsonLdData: Record<string, unknown>[] = [
     {
       '@context': 'https://schema.org',
       '@type': 'Course',
@@ -278,6 +329,18 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         { '@type': 'ListItem', position: 3, name: program.title, item: `https://impaktmma.co.za/classes/${program.slug}` },
       ],
     },
+    ...(program.faqs && program.faqs.length > 0 ? [{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: program.faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    }] : []),
   ];
 
   return (
@@ -286,7 +349,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 
       <div className="py-12 bg-mesh-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-xs text-slate-400">
@@ -306,9 +369,18 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
             </div>
 
             <div className="relative z-10 p-8 sm:p-14 max-w-3xl">
-              <span className="px-3.5 py-1 rounded-full bg-red-600/30 border border-red-500/40 text-xs font-bold text-red-400 uppercase tracking-widest mb-4 inline-block">
-                {program.category}
-              </span>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="px-3.5 py-1 rounded-full bg-red-600/30 border border-red-500/40 text-xs font-bold text-red-400 uppercase tracking-widest inline-block">
+                  {program.category}
+                </span>
+                <div className="w-9 h-9 rounded-lg bg-black/50 border border-white/20 p-1.5 flex items-center justify-center backdrop-blur-md">
+                  <img
+                    src={program.icon}
+                    alt=""
+                    className="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,30,39,0.7)]"
+                  />
+                </div>
+              </div>
 
               <h1 className="text-3xl sm:text-5xl font-heading font-extrabold text-white uppercase tracking-wider mb-4 leading-tight">
                 {program.h1}
@@ -343,10 +415,10 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 
           {/* Grid Breakdown: Benefits, Curriculum, Schedule, Coach */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
-            
+
             {/* Left Col: Benefits & Curriculum */}
             <div className="lg:col-span-2 space-y-10">
-              
+
               {/* Program Benefits */}
               <div className="glass-panel p-8 rounded-2xl border border-white/10">
                 <h2 className="text-2xl font-heading font-bold text-white uppercase mb-6 flex items-center gap-2">
@@ -401,7 +473,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 
             {/* Right Col: Schedule & Equipment Sidebar */}
             <div className="space-y-8">
-              
+
               {/* Class Schedule Times */}
               <div className="glass-panel p-6 rounded-2xl border border-white/10">
                 <h3 className="text-xl font-heading font-bold text-white uppercase mb-4 flex items-center gap-2">
